@@ -2,6 +2,7 @@ import './index.css';
 
 interface Props {
   className?: string;
+  isDisabled?: boolean;
   isSmall?: boolean;
   onClick(): void;
   text: string;
@@ -10,6 +11,7 @@ interface Props {
 
 export function Button({
   className,
+  isDisabled = false,
   isSmall = false,
   onClick,
   text,
@@ -17,8 +19,10 @@ export function Button({
 }: Props) {
   return (
     <button
-      className={`Button ${type} ${isSmall && 'small'} ${className}`}
-      onClick={onClick}
+      className={`Button ${type} ${isSmall && 'small'} ${
+        isDisabled && 'disabled'
+      } ${className}`}
+      onClick={isDisabled ? undefined : onClick}
     >
       {text}
     </button>

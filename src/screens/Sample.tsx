@@ -22,6 +22,13 @@ export function Sample() {
             text="Say hello"
             type="Secondary"
           />
+          <Button
+            isDisabled
+            isSmall
+            onClick={() => console.log('Hello')}
+            text="Say hello"
+            type="Secondary"
+          />
         </>
       }
     />

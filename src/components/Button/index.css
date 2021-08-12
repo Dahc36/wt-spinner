@@ -2,7 +2,7 @@
   background: var(--blue-light);
   border: 1px solid var(--blue-light);
   border-radius: 1.25em;
-  color: #fff;
+  color: var(--white);
   cursor: pointer;
   font-size: 1em;
   font-weight: 500;
@@ -28,4 +28,18 @@
 
 .Button.small {
   width: 5.625em;
+}
+
+.Button.disabled {
+  background: var(--gray-regular);
+  border-color: var(--gray-regular);
+  color: var(--white);
+  cursor: default;
+}
+
+.Button.disabled:hover {
+  background: var(--gray-regular);
+  border-color: var(--gray-regular);
+  color: var(--white);
+  cursor: default;
 }
