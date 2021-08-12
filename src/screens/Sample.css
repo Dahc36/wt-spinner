@@ -1,0 +1,10 @@
+.Sample-container {
+  position: absolute;
+  left: 5em;
+  top: 50%;
+  margin: -12.8125em 0 0;
+}
+
+.Sample-Spinner {
+  margin: 1.875em auto 0.75em;
+}
