@@ -1,4 +1,8 @@
 :root {
+  --black-regular: #17181a;
   --blue-regular: rgb(64, 159, 255);
-  --gray-regular: rgb(232, 235, 237);
+  --gray-lighter: rgb(232, 235, 237);
+  --gray-light: #d4d7d9;
+  --gray-regular: #babcbf;
+  --white: #fff;
 }

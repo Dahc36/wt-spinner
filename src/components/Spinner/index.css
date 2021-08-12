@@ -20,11 +20,31 @@
 
 .Spinner-svg circle {
   fill: none;
-  stroke: var(--gray-regular);
+  stroke: var(--gray-lighter);
 }
 
 .Spinner-svg path {
   fill: none;
   stroke: var(--blue-regular);
   stroke-linecap: round;
+}
+
+.Spinner-progress {
+  margin: -2px 0 0 2px;
+  position: absolute;
+  color: var(--black-regular);
+  font-size: 3.875em;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.Spinner-percentage {
+  color: var(--gray-regular);
+  display: inline-block;
+  font-size: 0.35484em;
+  font-weight: 400;
+  line-height: 1;
+  position: relative;
+  top: 0.27273em;
+  vertical-align: top;
 }

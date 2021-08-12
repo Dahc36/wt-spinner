@@ -1,38 +1,5 @@
 export const colors = 'colors';
 
-// spinner
-
-// svg
-// display: block;
-//     margin: 1.875em auto .75em;
-//     position: relative;
-//     width: 10.625em;
-
-// %
-// color: #babcbf;
-//     display: inline-block;
-//     font-size: .35484em;
-//     font-weight: 400;
-//     line-height: 1;
-//     position: relative;
-//     top: .27273em;
-//     vertical-align: top;
-
-// 42
-// color: #17181a;
-//     font-family: -apple-system,\.SFNSText-Regular,San Francisco,Roboto,Segoe UI,Helvetica Neue,Lucida Grande,sans-serif;
-//     font-feature-settings: "lnum","lnum";
-//     font-size: 3.875em;
-//     font-variant-numeric: lining-nums;
-//     font-weight: 400;
-//     left: 50%;
-//     line-height: 1;
-//     margin: -2px 0 0 2px;
-//     position: absolute;
-//     top: 50%;
-//     transform: translate(-50%,-50%);
-//     white-space: nowrap;
-
 // Standard ////////////////////////
 
 // Footer

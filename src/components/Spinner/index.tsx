@@ -32,13 +32,9 @@ export function Spinner({ className, progress, width }: Props) {
         <path d={svgPath} strokeWidth={STROKE_WIDTH} />
       </svg>
 
-      <span
-        style={{
-          position: 'absolute',
-        }}
-      >
+      <span className="Spinner-progress">
         {progress}
-        <span>%</span>
+        <span className="Spinner-percentage">%</span>
       </span>
     </div>
   );
