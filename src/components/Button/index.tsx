@@ -1,8 +1,26 @@
+import './index.css';
+
 interface Props {
-  text: string;
+  className?: string;
+  isSmall?: boolean;
   onClick(): void;
+  text: string;
+  type?: 'Primary' | 'Secondary';
 }
 
-export function Button({ onClick, text }: Props) {
-  return <button onClick={onClick}>{text}</button>;
+export function Button({
+  className,
+  isSmall = false,
+  onClick,
+  text,
+  type = 'Primary',
+}: Props) {
+  return (
+    <button
+      className={`Button ${type} ${isSmall && 'small'} ${className}`}
+      onClick={onClick}
+    >
+      {text}
+    </button>
+  );
 }

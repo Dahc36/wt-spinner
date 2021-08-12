@@ -1,0 +1,31 @@
+.Button {
+  background: var(--blue-light);
+  border: 1px solid var(--blue-light);
+  border-radius: 1.25em;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: 500;
+  height: 2.5em;
+  width: 9.75em;
+  transition: border-color 0.2s linear, background-color 0.2s linear;
+}
+
+.Button:hover {
+  background-color: var(--blue-regular);
+  border-color: var(--blue-regular);
+}
+
+.Button.Secondary {
+  background: none;
+  color: var(--blue-light);
+}
+
+.Button.Secondary:hover {
+  border-color: var(--blue-regular);
+  color: var(--blue-regular);
+}
+
+.Button.small {
+  width: 5.625em;
+}
