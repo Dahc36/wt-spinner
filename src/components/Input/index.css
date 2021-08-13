@@ -18,7 +18,7 @@
   position: absolute;
   top: 1.07143em;
   left: 0.8125em;
-  transition: 0.2s cubic-bezier(0.77, 0, 0.175, 1);
+  transition: 0.2s linear;
 }
 
 .Input-label.focused {

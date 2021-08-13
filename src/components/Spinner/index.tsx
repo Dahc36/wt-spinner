@@ -1,24 +1,42 @@
+import { useEffect, useRef, useState } from 'react';
+
 import './index.css';
 import { getSvgPath } from './helpers';
 
 interface Props {
   className?: string;
+  dimensions: number;
   progress: number;
-  width: number;
 }
 
 const STROKE_WIDTH = 10;
 
-export function Spinner({ className, progress, width }: Props) {
-  const radius = width - STROKE_WIDTH;
-  const svgPath = getSvgPath(radius, progress);
+export function Spinner({ className, dimensions, progress }: Props) {
+  const radius = dimensions - STROKE_WIDTH;
+  const [svgPath, setSvgPath] = useState(getSvgPath(radius, progress));
+
+  const progressRef = useRef(progress);
+
+  useEffect(() => {
+    const steps = (progress - progressRef.current) / 50;
+    const timeoutId = setInterval(() => {
+      if (progressRef.current + steps > progress) {
+        clearInterval(timeoutId);
+      }
+
+      progressRef.current += steps;
+      setSvgPath(getSvgPath(radius, progressRef.current));
+    }, 20);
+
+    return () => clearInterval(timeoutId);
+  }, [progress, radius]);
 
   return (
     <div
       className={`Spinner-container ${className}`}
       style={{
-        width: `${width}px`,
-        height: `${width}px`,
+        width: `${dimensions}px`,
+        height: `${dimensions}px`,
       }}
     >
       <svg
@@ -33,7 +51,7 @@ export function Spinner({ className, progress, width }: Props) {
       </svg>
 
       <span className="Spinner-progress">
-        {progress}
+        {Math.min(99, Math.round(progress))}
         <span className="Spinner-percentage">%</span>
       </span>
     </div>

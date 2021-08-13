@@ -5,6 +5,53 @@
   margin: -12.8125em 0 0;
 }
 
+.Sample-Spinner-container {
+  display: flex;
+  flex-direction: column;
+}
+
 .Sample-Spinner {
   margin: 1.875em auto 0.75em;
+}
+
+.Sample-h2 {
+  color: var(--black-regular);
+  font-family: 'Darker Grotesque', sans-serif;
+  font-size: 1.85em;
+  font-weight: 400;
+  line-height: 1.2;
+  margin: 0 0 0.36364em;
+  padding: 0 0.90909em;
+  text-align: center;
+}
+
+.Sample-p {
+  color: var(--gray-darker);
+  font-family: 'Darker Grotesque', sans-serif;
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 1.61538em;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.Sample-input-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 0.625em;
+}
+
+.Sample-buttons-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 4px;
+}
+
+.Sample-button-no {
+  margin-right: 0.625em;
 }

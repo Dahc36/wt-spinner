@@ -6,10 +6,11 @@ interface Props {
   id?: string;
   label: string;
   onChange(event: React.ChangeEvent<HTMLInputElement>): void;
+  type?: string;
   value: string;
 }
 
-export function Input({ id, label, onChange, value }: Props) {
+export function Input({ id, label, onChange, type = 'text', value }: Props) {
   const [isFocused, setIsFocused] = useState(false);
 
   function handleBlur() {
@@ -23,7 +24,7 @@ export function Input({ id, label, onChange, value }: Props) {
   return (
     <div className="Input-container">
       <label
-        className={`Input-label ${(isFocused || value !== '') && 'focused'}`}
+        className={`Input-label ${(isFocused || Boolean(value)) && 'focused'}`}
         htmlFor={id}
       >
         {label}
@@ -32,7 +33,7 @@ export function Input({ id, label, onChange, value }: Props) {
       <input
         className="Input-input"
         id={id}
-        type="text"
+        type={type}
         onBlur={handleBlur}
         onChange={onChange}
         onFocus={handleFocus}
