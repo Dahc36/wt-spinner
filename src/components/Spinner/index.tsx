@@ -51,7 +51,7 @@ export function Spinner({ className, dimensions, progress }: Props) {
       </svg>
 
       <span className="Spinner-progress">
-        {Math.min(99, Math.round(progress))}
+        {Math.min(100, Math.round(progress))}
         <span className="Spinner-percentage">%</span>
       </span>
     </div>

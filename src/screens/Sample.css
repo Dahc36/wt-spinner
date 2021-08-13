@@ -5,6 +5,13 @@
   margin: -12.8125em 0 0;
 }
 
+@media (max-width: 27.5em) {
+  .Sample-container {
+    position: static;
+    margin: 0;
+  }
+}
+
 .Sample-Spinner-container {
   display: flex;
   flex-direction: column;
