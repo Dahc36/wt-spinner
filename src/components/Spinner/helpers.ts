@@ -42,6 +42,6 @@ function svgPathDescribeArc(
 }
 
 export function getSvgPath(radius: number, progress: number) {
-  const endAngle = ((360 - 1) * progress) / 100;
+  const endAngle = (359.99 * progress) / 100;
   return svgPathDescribeArc(radius / 2, radius / 2, radius / 2, 0, endAngle);
 }

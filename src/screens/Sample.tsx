@@ -22,20 +22,17 @@ export function Sample() {
     parseFloat(uploadSpeed) <= 0;
 
   const { cancel, isTransfering, progress, totalTransfered, transfer } =
-    useTransfer(fileSize, uploadSpeed, () => {
-      setIsCanceling(false);
-    });
+    useTransfer(fileSize, uploadSpeed, handleCancelOptionNo);
 
   function handleCancel() {
     setIsCanceling(true);
   }
 
-  function handleCancelYes() {
+  function handleCancelOptionYes() {
     cancel();
-    setIsCanceling(false);
   }
 
-  function handleCancelNo() {
+  function handleCancelOptionNo() {
     setIsCanceling(false);
   }
 
@@ -101,11 +98,11 @@ export function Sample() {
             <Button
               className="Sample-button-no"
               isSmall
-              onClick={handleCancelNo}
+              onClick={handleCancelOptionNo}
               text="No"
               type="Secondary"
             />
-            <Button isSmall onClick={handleCancelYes} text="Yes" />
+            <Button isSmall onClick={handleCancelOptionYes} text="Yes" />
           </div>
         );
       }

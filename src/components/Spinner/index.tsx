@@ -18,14 +18,14 @@ export function Spinner({ className, dimensions, progress }: Props) {
   const progressRef = useRef(progress);
 
   useEffect(() => {
-    const steps = (progress - progressRef.current) / 50;
+    const steps = (progress - progressRef.current) / 25;
     const timeoutId = setInterval(() => {
       if (progressRef.current + steps > progress) {
         clearInterval(timeoutId);
       }
 
       progressRef.current += steps;
-      setSvgPath(getSvgPath(radius, progressRef.current));
+      setSvgPath(getSvgPath(radius, Math.min(100, progressRef.current)));
     }, 20);
 
     return () => clearInterval(timeoutId);

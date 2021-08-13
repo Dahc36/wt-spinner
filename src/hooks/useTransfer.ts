@@ -19,6 +19,7 @@ export function useTransfer(
   function cancel() {
     intervalRef.current && clearInterval(intervalRef.current);
     setIsTransfering(false);
+    onCancel();
   }
 
   function transfer() {
@@ -29,7 +30,6 @@ export function useTransfer(
     intervalRef.current = setInterval(() => {
       if (total > parseFloat(fileSize) * 1000) {
         cancel();
-        onCancel();
       }
 
       total += parseFloat(uploadSpeed) / UPLOADS_PER_SECOND;
