@@ -19,14 +19,20 @@
   .Card-container {
     box-sizing: border-box;
     margin: 0;
-    padding: 2em;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    height: 100%;
     width: 100%;
+    box-shadow: none;
+  }
+
+  .Card-body {
+    height: unset;
   }
 
   .Card-footer {
+    height: unset;
     border: none;
   }
 }
