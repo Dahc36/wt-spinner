@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/wt-spinner/static/css/main.f51b9c49.chunk.css",
-    "main.js": "/wt-spinner/static/js/main.e630dc6c.chunk.js",
-    "main.js.map": "/wt-spinner/static/js/main.e630dc6c.chunk.js.map",
+    "main.css": "/wt-spinner/static/css/main.a841ae09.chunk.css",
+    "main.js": "/wt-spinner/static/js/main.badba6ce.chunk.js",
+    "main.js.map": "/wt-spinner/static/js/main.badba6ce.chunk.js.map",
     "runtime-main.js": "/wt-spinner/static/js/runtime-main.d36c1c02.js",
     "runtime-main.js.map": "/wt-spinner/static/js/runtime-main.d36c1c02.js.map",
     "static/js/2.2a1a17f0.chunk.js": "/wt-spinner/static/js/2.2a1a17f0.chunk.js",
     "static/js/2.2a1a17f0.chunk.js.map": "/wt-spinner/static/js/2.2a1a17f0.chunk.js.map",
     "index.html": "/wt-spinner/index.html",
-    "static/css/main.f51b9c49.chunk.css.map": "/wt-spinner/static/css/main.f51b9c49.chunk.css.map",
+    "static/css/main.a841ae09.chunk.css.map": "/wt-spinner/static/css/main.a841ae09.chunk.css.map",
     "static/js/2.2a1a17f0.chunk.js.LICENSE.txt": "/wt-spinner/static/js/2.2a1a17f0.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.d36c1c02.js",
     "static/js/2.2a1a17f0.chunk.js",
-    "static/css/main.f51b9c49.chunk.css",
-    "static/js/main.e630dc6c.chunk.js"
+    "static/css/main.a841ae09.chunk.css",
+    "static/js/main.badba6ce.chunk.js"
   ]
 }
