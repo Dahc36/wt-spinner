@@ -22,7 +22,7 @@ export function Spinner({ className, dimensions, progress }: Props) {
   useEffect(() => {
     const steps = (progress - progressRef.current) / 25;
     const timeoutId = setInterval(() => {
-      if (progressRef.current + steps > progress) {
+      if (progressRef.current + steps >= progress) {
         clearInterval(timeoutId);
       }
 
