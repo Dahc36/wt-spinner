@@ -1,15 +1,17 @@
 import { render, screen, waitFor } from '@testing-library/react';
 
-import { Spinner } from './';
+import { Spinner, STROKE_WIDTH } from './';
 
-const DIMENSIONS = 170;
+const DIMENSIONS = 200;
+const DIAMETER = DIMENSIONS - STROKE_WIDTH;
+const RADIUS = DIAMETER / 2;
 
 test('can make progress', async () => {
   const { rerender } = render(<Spinner dimensions={DIMENSIONS} progress={0} />);
   expect(screen.getByText(/0/i)).toBeInTheDocument();
   expect(screen.getByTestId('svg-path')).toHaveAttribute(
     'd',
-    'M 80 0 A 80 80 0 0 0 80 0'
+    `M ${RADIUS} 0 A ${RADIUS} ${RADIUS} 0 0 0 ${RADIUS} 0`
   );
 
   rerender(<Spinner dimensions={DIMENSIONS} progress={25} />);
@@ -17,7 +19,7 @@ test('can make progress', async () => {
   await waitFor(() =>
     expect(screen.getByTestId('svg-path')).toHaveAttribute(
       'd',
-      'M 160 80 A 80 80 0 0 0 80 0'
+      `M ${DIAMETER} ${RADIUS} A ${RADIUS} ${RADIUS} 0 0 0 ${RADIUS} 0`
     )
   );
 
@@ -26,7 +28,7 @@ test('can make progress', async () => {
   await waitFor(() =>
     expect(screen.getByTestId('svg-path')).toHaveAttribute(
       'd',
-      'M 80 160 A 80 80 0 0 0 80 0'
+      `M ${RADIUS} ${DIAMETER} A ${RADIUS} ${RADIUS} 0 0 0 ${RADIUS} 0`
     )
   );
 });

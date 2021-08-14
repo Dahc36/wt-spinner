@@ -11,7 +11,7 @@ interface Props {
   progress: number;
 }
 
-const STROKE_WIDTH = 10;
+export const STROKE_WIDTH = 10;
 
 export function Spinner({ className, dimensions, progress }: Props) {
   const radius = dimensions - STROKE_WIDTH;

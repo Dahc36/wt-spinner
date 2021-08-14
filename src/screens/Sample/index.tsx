@@ -1,13 +1,13 @@
 import { useState } from 'react';
 
-import { formatFloat } from '../common/formatters';
-import { Button } from '../components/Button';
-import { Card } from '../components/Card';
-import { Input } from '../components/Input';
-import { Spinner } from '../components/Spinner';
-import { useTransfer } from '../hooks/useTransfer';
+import { formatFloat } from '../../common/formatters';
+import { Button } from '../../components/Button';
+import { Card } from '../../components/Card';
+import { Input } from '../../components/Input';
+import { Spinner } from '../../components/Spinner';
+import { useTransfer } from '../../hooks/useTransfer';
 
-import './Sample.css';
+import './index.css';
 
 export function Sample() {
   const [fileSize, setFileSize] = useState('2.125');

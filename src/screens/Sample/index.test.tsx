@@ -1,7 +1,7 @@
 import { render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
-import { Sample } from './Sample';
+import { Sample } from './';
 
 test('can cancel transfer', async () => {
   render(<Sample />);
