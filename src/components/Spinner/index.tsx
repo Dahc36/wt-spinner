@@ -5,7 +5,9 @@ import { getSvgPath } from './helpers';
 
 interface Props {
   className?: string;
+  /** Length of the side of the square container where the Spinner is rendered */
   dimensions: number;
+  /** Current progress in percentage, should be a value bewteen 0 and 100  */
   progress: number;
 }
 
@@ -47,7 +49,7 @@ export function Spinner({ className, dimensions, progress }: Props) {
         }}
       >
         <circle cx="50%" cy="50%" r="50%" strokeWidth={STROKE_WIDTH} />
-        <path d={svgPath} strokeWidth={STROKE_WIDTH} />
+        <path data-testid="svg-path" d={svgPath} strokeWidth={STROKE_WIDTH} />
       </svg>
 
       <span className="Spinner-progress">
